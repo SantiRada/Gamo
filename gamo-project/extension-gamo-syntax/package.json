@@ -6,6 +6,10 @@
   "publisher": "Gamo Studios",
   "icon": "assets/icon.png",
   "engines": { "vscode": "^1.60.0" },
+  "scripts": {
+    "compile": "npx vsce package",
+    "dev": "code --install-extension gamo-0.0.1.vsix"
+  },
   "categories": [ "Programming Languages" ],
   "contributes": {
     "languages": [

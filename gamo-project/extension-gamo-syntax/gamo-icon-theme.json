@@ -1,5 +1,6 @@
 {
   "iconDefinitions": {
+    "gmi": { "iconPath": "./icons/GMI.svg" },
     "gamo-icon": { "iconPath": "./icons/GAMO.svg" },
     "lang-icon": { "iconPath": "./icons/LANG.svg" },
     "dialog-icon": { "iconPath": "./icons/DIALOG.svg" },
@@ -9,14 +10,33 @@
     "ui-icon": { "iconPath": "./icons/UI.svg" },
 
     "json": { "iconPath": "./icons/code/json.svg" },
+    "js": { "iconPath": "./icons/code/JS.svg" },
+    "ts": { "iconPath": "./icons/code/TS.svg" },
+    "cs": { "iconPath": "./icons/code/CS.svg" },
 
+    "folder-modules-open": { "iconPath": "./icons/base/folder/MODULES-OPEN.svg" },
+    "folder-modules": { "iconPath": "./icons/base/folder/MODULES.svg" },
+    "folder-devbuild-open": { "iconPath": "./icons/base/folder/DEV-BUILD-OPEN.svg" },
+    "folder-devbuild": { "iconPath": "./icons/base/folder/DEV-BUILD.svg" },
+    "folder-build-open": { "iconPath": "./icons/base/folder/BUILD-OPEN.svg" },
+    "folder-build": { "iconPath": "./icons/base/folder/BUILD.svg" },
     "folder-icon": { "iconPath": "./icons/base/FOLDER_VOID.svg" },
     "folder-open-icon": { "iconPath": "./icons/base/FOLDER_FILL.svg" },
+
     "file": { "iconPath": "./icons/base/FILE.svg" },
-    "imgs": { "iconPath": "./icons/base/IMGS.svg" }
+    "imgs": { "iconPath": "./icons/base/IMGS.svg" },
+    "vector": { "iconPath": "./icons/base/VECTOR.svg" },
+    "videos": { "iconPath": "./icons/base/VIDEOS.svg" },
+    "audio": { "iconPath": "./icons/base/AUDIO.svg" },
+    "3d": { "iconPath": "./icons/base/3D.svg" },
+    "anim": { "iconPath": "./icons/base/ANIM.svg" },
+    "editable": { "iconPath": "./icons/base/ASEPRITE.svg" },
+    "shader": { "iconPath": "./icons/base/SHADER.svg" },
+    "typo": { "iconPath": "./icons/base/TYPO.svg" }
   },
   "file": "file",
   "fileExtensions": {
+    "gmi": "gmi",
     "gamo": "gamo-icon",
     "lang": "lang-icon",
     "dialog": "dialog-icon",
@@ -25,18 +45,89 @@
     "art": "art-icon",
     "ui": "ui-icon",
 
-    "json": "json",
-
     "png": "imgs",
     "jpg": "imgs",
     "jpeg": "imgs",
     "gif": "imgs",
+    "tga": "imgs",
     "bmp": "imgs",
     "webp": "imgs",
-    "svg": "imgs"
+
+    "svg": "vector",
+    "ai": "vector",
+    "eps": "vector",
+
+    "mp4": "videos",
+    "mov": "videos",
+    "webm": "videos",
+    "avi": "videos",
+
+    "wav": "audio",
+    "mp3": "audio",
+    "ogg": "audio",
+    "flac": "audio",
+    "m4a": "audio",
+    "mod": "audio",
+    "xm": "audio",
+    "it": "audio",
+    "s3m": "audio",
+    "mid": "audio",
+
+    "fbx": "3d",
+    "obj": "3d",
+    "gltf": "3d",
+    "glb": "3d",
+    "dae": "3d",
+    "3ds": "3d",
+    "blend": "3d",
+
+    "anim": "anim",
+
+    "aseprite": "editable",
+    "psd": "editable",
+    "ia": "editable",
+    "ase": "editable",
+
+    "shader": "shader",
+    "hlsl": "shader",
+    "glsl": "shader",
+    "frag": "shader",
+    "vert": "shader",
+    "mat": "shader",
+    "material": "shader",
+
+    "ttf": "typo",
+    "otf": "typo",
+    "woff": "typo",
+    "woff2": "typo",
+
+    "json": "json",
+    "yaml": "json",
+    "xml": "json",
+    "ini": "json",
+    "msi": "json",
+    "js": "js",
+    "ts": "ts",
+    "cs": "cs",
+    "c": "cs",
+    "c++": "cs"
   },
   "fileNames": {},
-  "folderNames": {},
+  "folderNames": {
+    "node_modules": "folder-modules",
+    "gmi_modules": "folder-modules",
+    "gamo_modules": "folder-modules",
+
+    "dist": "folder-build",
+    "dist-dev": "folder-devbuild"
+  },
+  "folderNamesExpanded": {
+    "node_modules": "folder-modules-open",
+    "gmi_modules": "folder-modules-open",
+    "gamo_modules": "folder-modules-open",
+    "dist": "folder-build-open",
+    "dist-dev": "folder-devbuild-open"
+  },
   "folder": "folder-icon",
   "folderExpanded": "folder-open-icon",
   "light": {},

@@ -2,10 +2,10 @@ const fs = require('fs');
 const path = require('path');
 
 function installCommand(packages) {
-  const nodeModulesPath = path.join(process.cwd(), 'node_modules_gmi');
+  const gmiModulesPath = path.join(process.cwd(), 'gmi_modules');
   const gameConfigPath = path.join(process.cwd(), 'game.json');
 
-  if (!fs.existsSync(nodeModulesPath)) fs.mkdirSync(nodeModulesPath);
+  if (!fs.existsSync(gmiModulesPath)) fs.mkdirSync(gmiModulesPath);
 
   let gameConfig = {};
   try {
@@ -16,7 +16,7 @@ function installCommand(packages) {
   }
 
   packages.forEach(pkg => {
-    const pkgPath = path.join(nodeModulesPath, `${pkg}.gmi.js`);
+    const pkgPath = path.join(gmiModulesPath, `${pkg}.gmi.js`);
     fs.writeFileSync(pkgPath, `// ${pkg} instalado`);
     gameConfig.dependencies[pkg] = "^1.0.0";
     console.log(`✅ Paquete "${pkg}" instalado.`);
