@@ -7,6 +7,7 @@ const { buildCommand } = require('../src/build.js');
 const { prebuildCommand } = require('../src/prebuild.js');
 const { helpCommand } = require('../src/help.js');
 const { addCommand } = require('../src/add.js');
+const { runCommand } = require('../src/run.js');
 
 const program = new Command();
 
@@ -38,6 +39,18 @@ program
   .command('build')
   .description('Genera el ejecutable del juego en modo producción')
   .action(buildCommand);
+
+program
+  .command('run')
+  .argument('<target>', 'Nombre del script a ejecutar (ej: package)')
+  .description('Ejecuta un script definido en un archivo .gmi')
+  .action((target) => {
+    if (target === 'package') runCommand();
+    else {
+      console.error(`❌ Script '${target}' no reconocido. Actualmente solo se soporta 'package'.`);
+      process.exit(1);
+    }
+  });
 
 program
   .command('prebuild')

@@ -1,0 +1,6 @@
+import hud from 'visual/hud.ui'
+import scene;
+
+scene Menu () {
+  show(hud)
+}

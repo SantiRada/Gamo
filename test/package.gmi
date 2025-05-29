@@ -1,0 +1,18 @@
+{
+    "package": [
+        "gmi init",
+        "gmi add scene Menu",
+        "gmi add scene Loading",
+        "gmi add dialog Scene_01",
+        "gmi add lang es",
+        "gmi add lang en",
+        "gmi add sound Scene_01",
+        "gmi add audio Player",
+        "gmi add art Player",
+        "gmi add art Player_Idle anim",
+        "gmi add art Player_Run anim",
+        "gmi add art Player_Dead anim",
+        "gmi add ui HUD",
+        "gmi add ui Menu"
+    ]
+}
