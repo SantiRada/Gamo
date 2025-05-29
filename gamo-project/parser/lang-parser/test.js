@@ -1,8 +1,8 @@
 const fs = require('fs');
-const parser = require('./dialog.gamo.js');
+const parser = require('./lang.gamo.js');
 
 // Leé un archivo .dialog.gamo
-const source = fs.readFileSync('./example.dialog', 'utf8');
+const source = fs.readFileSync('./example.lang', 'utf8');
 
 try {
     const result = parser.parse(source);
