@@ -1,0 +1,6 @@
+Interface "Player" {
+  file: "sprites/player/idle.png"
+  anims: ["idle", "run", "jump"]
+  directions: 4
+  color: "#FFFFFF"
+}

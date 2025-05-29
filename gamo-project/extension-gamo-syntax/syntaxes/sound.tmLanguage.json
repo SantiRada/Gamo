@@ -1,0 +1,106 @@
+{
+  "scopeName": "source.soundgamo",
+  "patterns": [
+    { "include": "#keywordsControl" },
+    { "include": "#keywordsOperator" },
+    { "include": "#separator" },
+    { "include": "#brackets" },
+    { "include": "#strings" },
+    { "include": "#numbers" },
+    { "include": "#booleans" },
+    { "include": "#units" },
+    { "include": "#classNames" },
+    { "include": "#identifiers" },
+    { "include": "#comments" }
+  ],
+  "repository": {
+    "keywordsControl": {
+      "patterns": [
+        {
+          "match": "\\b(bank|if|for)\\b",
+          "name": "keyword.control.soundgamo"
+        }
+      ]
+    },
+    "keywordsOperator": {
+      "patterns": [
+        {
+          "match": "\\b(stop|play|duck|wait|delay)\\b",
+          "name": "support.function.soundgamo"
+        }
+      ]
+    },
+    "brackets": {
+      "patterns": [
+        {
+          "match": "[\\{\\}\\[\\]\\(\\)]",
+          "name": "punctuation.section.soundgamo"
+        }
+      ]
+    },
+    "classNames": {
+      "patterns": [
+        {
+          "match": "\\bbank\\s+([A-Za-z_][A-Za-z0-9_]*)\\b",
+          "captures": {
+            "1": {
+              "name": "entity.name.type.class.soundgamo"
+            }
+          }
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "match": "\"([^\"\\\\]|\\\\.)*\"",
+          "name": "string.quoted.double.soundgamo"
+        },
+        {
+          "match": "'([^'\\\\]|\\\\.)*'",
+          "name": "string.quoted.single.soundgamo"
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "match": "\\b\\d+(\\.\\d+)?\\b",
+          "name": "constant.numeric.soundgamo"
+        }
+      ]
+    },
+    "identifiers": {
+      "patterns": [
+        {
+          "match": "\\b[A-Za-z_][A-Za-z0-9_]*\\b",
+          "name": "variable.other.soundgamo"
+        }
+      ]
+    },
+    "booleans": {
+        "patterns": [
+            {
+            "match": "\\b(true|false)\\b",
+            "name": "constant.language.boolean.soundgamo"
+            }
+        ]
+    },
+    "units": {
+      "patterns": [
+        {
+          "match": "(?<=\\d)\\s*(s|ms|%|px|vh|vw|em|rem)\\b",
+          "name": "constant.numeric.soundgamo"
+        }
+      ]
+    },
+    "comments": {
+      "patterns": [
+        {
+          "match": "//.*$",
+          "name": "comment.line.double-slash.soundgamo"
+        }
+      ]
+    }
+  }
+}

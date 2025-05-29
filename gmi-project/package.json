@@ -1,0 +1,16 @@
+{
+  "name": "gmi",
+  "version": "1.0.0",
+  "scripts": {
+    "compile": "pkg . --targets node18-win-x64"
+  },
+  "bin": {
+    "gmi": "bin/gmi.js"
+  },
+  "pkg": {
+    "scripts": ["src/init.js", "src/install.js"]
+  },
+  "dependencies": {
+    "commander": "^11.0.0"
+  }
+}

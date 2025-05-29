@@ -1,0 +1,43 @@
+{
+  "scopeName": "source.langgamo",
+  "patterns": [
+    { "include": "#sectionTitles" },
+    { "include": "#arrow" },
+    { "include": "#colon" },
+    { "include": "#strings" }
+  ],
+  "repository": {
+    "sectionTitles": {
+      "patterns": [
+        {
+          "match": "^\\s*\\b([a-zA-Z_][a-zA-Z0-9_]*)\\b(?=\\s*=>)",
+          "name": "entity.name.type.class.langgamo"
+        }
+      ]
+    },
+    "arrow": {
+      "patterns": [
+        {
+          "match": "=>",
+          "name": "keyword.separator.langgamo"
+        }
+      ]
+    },
+    "colon": {
+      "patterns": [
+        {
+          "match": ":",
+          "name": "keyword.operator.colon.langgamo"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "match": "\"([^\"\\\\]|\\\\.)*\"",
+          "name": "string.quoted.double.langgamo"
+        }
+      ]
+    }
+  }
+}

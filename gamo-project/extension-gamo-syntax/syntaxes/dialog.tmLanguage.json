@@ -1,0 +1,96 @@
+{
+  "scopeName": "source.dialoggamo",
+  "patterns": [
+    { "include": "#keywordsControl" },
+    { "include": "#keywordsOperator" },
+    { "include": "#separator" },
+    { "include": "#brackets" },
+    { "include": "#strings" },
+    { "include": "#numbers" },
+    { "include": "#classNames" },
+    { "include": "#identifiers" },
+    { "include": "#comments" }
+  ],
+  "repository": {
+    "keywordsControl": {
+      "patterns": [
+        {
+          "match": "\\b(dialog|break|continue)\\b",
+          "name": "keyword.control.dialoggamo"
+        }
+      ]
+    },
+    "keywordsOperator": {
+      "patterns": [
+        {
+          "match": "\\b(options|branch|event|end)\\b",
+          "name": "support.function.dialoggamo"
+        }
+      ]
+    },
+    "separator": {
+      "patterns": [
+        {
+          "match": "=>",
+          "name": "keyword.separator.dialoggamo"
+        }
+      ]
+    },
+    "brackets": {
+      "patterns": [
+        {
+          "match": "[\\{\\}\\[\\]\\(\\)]",
+          "name": "punctuation.section.dialoggamo"
+        }
+      ]
+    },
+    "classNames": {
+      "patterns": [
+        {
+          "match": "\\bdialog\\s+([A-Za-z_][A-Za-z0-9_]*)\\b",
+          "captures": {
+            "1": {
+              "name": "entity.name.type.class.dialoggamo"
+            }
+          }
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "match": "\"([^\"\\\\]|\\\\.)*\"",
+          "name": "string.quoted.double.dialoggamo"
+        },
+        {
+          "match": "'([^'\\\\]|\\\\.)*'",
+          "name": "string.quoted.single.dialoggamo"
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "match": "\\b\\d+(\\.\\d+)?\\b",
+          "name": "constant.numeric.dialoggamo"
+        }
+      ]
+    },
+    "identifiers": {
+      "patterns": [
+        {
+          "match": "\\b[A-Za-z_][A-Za-z0-9_]*\\b",
+          "name": "variable.other.dialoggamo"
+        }
+      ]
+    },
+    "comments": {
+      "patterns": [
+        {
+          "match": "//.*$",
+          "name": "comment.line.double-slash.dialoggamo"
+        }
+      ]
+    }
+  }
+}

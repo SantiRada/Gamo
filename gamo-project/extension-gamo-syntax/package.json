@@ -1,0 +1,143 @@
+{
+  "name": "gamo",
+  "displayName": "Gamo Language Syntaxes",
+  "description": "Syntax highlighting for all extensions in the Gamo language",
+  "version": "0.0.1",
+  "publisher": "Gamo Studios",
+  "icon": "assets/icon.png",
+  "engines": { "vscode": "^1.60.0" },
+  "categories": [ "Programming Languages" ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "gamo",
+        "aliases": ["Gamo"],
+        "extensions": [".gamo"],
+        "configuration": "./language-configuration.json"
+      },
+      {
+        "id": "dialoggamo",
+        "aliases": ["Dialog Gamo"],
+        "extensions": [".dialog"],
+        "configuration": "./language-configuration.json"
+      },
+      {
+        "id": "langgamo",
+        "aliases": ["Lang Gamo"],
+        "extensions": [".lang"],
+        "configuration": "./language-configuration.json"
+      },
+      {
+        "id": "soundgamo",
+        "aliases": ["Sound Gamo"],
+        "extensions": [".sound"],
+        "configuration": "./language-configuration.json"
+      },
+      {
+        "id": "audiogamo",
+        "aliases": ["Audio Gamo"],
+        "extensions": [".audio"],
+        "configuration": "./language-configuration.json"
+      },
+      {
+        "id": "artgamo",
+        "aliases": ["Art Gamo"],
+        "extensions": [".art"],
+        "configuration": "./language-configuration.json"
+      },
+      {
+        "id": "uigamo",
+        "aliases": ["UI Gamo"],
+        "extensions": [".ui"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "gamo",
+        "scopeName": "source.gamo",
+        "path": "./syntaxes/gamo.tmLanguage.json"
+      },
+      {
+        "language": "dialoggamo",
+        "scopeName": "source.dialoggamo",
+        "path": "./syntaxes/dialog.tmLanguage.json"
+      },
+      {
+        "language": "langgamo",
+        "scopeName": "source.langgamo",
+        "path": "./syntaxes/lang.tmLanguage.json"
+      },
+      {
+        "language": "soundgamo",
+        "scopeName": "source.soundgamo",
+        "path": "./syntaxes/sound.tmLanguage.json"
+      },
+      {
+        "language": "audiogamo",
+        "scopeName": "source.audiogamo",
+        "path": "./syntaxes/audio.tmLanguage.json"
+      },
+      {
+        "language": "artgamo",
+        "scopeName": "source.artgamo",
+        "path": "./syntaxes/art.tmLanguage.json"
+      },
+      {
+        "language": "uigamo",
+        "scopeName": "source.uigamo",
+        "path": "./syntaxes/ui.tmLanguage.json"
+      }
+    ],
+    "fileIcons": {
+      "icons": [
+        {
+          "icon": "./icons/GAMO.svg",
+          "fileExtensions": ["gamo"],
+          "languageIds": ["gamo"]
+        },
+        {
+          "icon": "./icons/DIALOG.svg",
+          "fileExtensions": ["dialog"],
+          "languageIds": ["dialoggamo"]
+        },
+        {
+          "icon": "./icons/LANG.svg",
+          "fileExtensions": ["lang"],
+          "languageIds": ["langgamo"]
+        },
+        {
+          "icon": "./icons/AUDIO.svg",
+          "fileExtensions": ["audio"],
+          "languageIds": ["audiogamo"]
+        },
+        {
+          "icon": "./icons/SOUND.svg",
+          "fileExtensions": ["sound"],
+          "languageIds": ["soundgamo"]
+        },
+        {
+          "icon": "./icons/ART.svg",
+          "fileExtensions": ["art"],
+          "languageIds": ["artgamo"]
+        },
+        {
+          "icon": "./icons/UI.svg",
+          "fileExtensions": ["ui"],
+          "languageIds": ["uigamo"]
+        }
+      ]
+    },
+    "iconThemes": [
+      {
+        "id": "gamo-icons",
+        "label": "Gamo Icons",
+        "path": "./gamo-icon-theme.json"
+      }
+    ]
+  },
+  "dependencies": {
+    "generator-code": "1.11.9",
+    "yo": "5.1.0"
+  }
+}

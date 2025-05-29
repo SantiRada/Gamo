@@ -1,0 +1,24 @@
+dialog IntroScene {
+    "NPC1" => "Intro_01"
+
+    [ options:
+        "opcion_001": branch("example")
+        "opcion_002": branch("other_example")
+    ]
+
+    example {
+        "NPC2" => "Intro_02"
+
+        [ options:
+            "opcion_003": continue
+            "opcion_004": break
+        ]
+    }
+
+    other_example {
+        "NPC3" => "Intro_03" continue
+        "NPC4" => "Intro_04" break
+    }
+
+    end()
+}

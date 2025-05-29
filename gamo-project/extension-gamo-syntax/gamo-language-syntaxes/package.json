@@ -1,0 +1,25 @@
+{
+  "name": "gamo-language-syntaxes",
+  "displayName": "Gamo Language Syntaxes",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.100.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "",
+      "aliases": ["Gamo", ""],
+      "extensions": [".gamo",".dialog.gamo",".lang.gamo",".audio.gamo",".sound.gamo",".art.gamo",".ui.gamo"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "",
+      "scopeName": "",
+      "path": "./syntaxes/.tmLanguage.json"
+    }]
+  }
+}

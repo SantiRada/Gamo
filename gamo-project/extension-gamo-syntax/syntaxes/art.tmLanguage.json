@@ -1,0 +1,93 @@
+{
+  "scopeName": "source.artgamo",
+  "patterns": [
+    { "include": "#keywordsControl" },
+    { "include": "#keywordsOperator" },
+    { "include": "#separator" },
+    { "include": "#brackets" },
+    { "include": "#strings" },
+    { "include": "#numbers" },
+    { "include": "#booleans" },
+    { "include": "#identifiers" },
+    { "include": "#units" },
+    { "include": "#comments" }
+  ],
+  "repository": {
+    "keywordsControl": {
+      "patterns": [
+        {
+          "match": "\\b(character|skin|anim)\\b",
+          "name": "keyword.control.artgamo"
+        }
+      ]
+    },
+    "keywordsOperator": {
+      "patterns": [
+        {
+          "match": "\\b(file|anims|dir|direction|directions|folder|color|flipX|flipY|sheet|size|padding|offset|loop|separator)\\b",
+          "name": "support.function.artgamo"
+        }
+      ]
+    },
+    "brackets": {
+      "patterns": [
+        {
+          "match": "[\\{\\}\\[\\]\\(\\)]",
+          "name": "punctuation.section.artgamo"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "match": "\"([^\"\\\\]|\\\\.)*\"",
+          "name": "string.quoted.double.artgamo"
+        },
+        {
+          "match": "'([^'\\\\]|\\\\.)*'",
+          "name": "string.quoted.single.artgamo"
+        }
+      ]
+    },
+    "booleans": {
+        "patterns": [
+            {
+            "match": "\\b(true|false)\\b",
+            "name": "constant.language.boolean.artgamo"
+            }
+        ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "match": "\\b\\d+(\\.\\d+)?\\b",
+          "name": "constant.numeric.artgamo"
+        }
+      ]
+    },
+    "identifiers": {
+      "patterns": [
+        {
+          "match": "\\b[A-Za-z_][A-Za-z0-9_]*\\b",
+          "name": "variable.other.artgamo"
+        }
+      ]
+    },
+    "units": {
+      "patterns": [
+        {
+          "match": "(?<=\\d)\\s*(s|ms|%|px|vh|vw|em|rem)\\b",
+          "name": "constant.numeric.artgamo"
+        }
+      ]
+    },
+    "comments": {
+      "patterns": [
+        {
+          "match": "//.*$",
+          "name": "comment.line.double-slash.artgamo"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,15 @@
+dialog NombreInterno {
+    "NPC1": "linea_001"
+
+    [ options:
+        "opcion_001" => branch("Example_Branch")
+        "opcion_002" => break
+    ]
+
+    Example_Branch {
+        "NPC2": "linea_002" continue
+        "NPC2": "linea_003" break
+    }
+
+    end()
+}

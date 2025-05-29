@@ -1,0 +1,93 @@
+{
+  "scopeName": "source.audiogamo",
+  "patterns": [
+    { "include": "#keywordsControl" },
+    { "include": "#keywordsOperator" },
+    { "include": "#separator" },
+    { "include": "#brackets" },
+    { "include": "#strings" },
+    { "include": "#numbers" },
+    { "include": "#booleans" },
+    { "include": "#identifiers" },
+    { "include": "#units" },
+    { "include": "#comments" }
+  ],
+  "repository": {
+    "keywordsControl": {
+      "patterns": [
+        {
+          "match": "\\b(soundbank)\\b",
+          "name": "keyword.control.audiogamo"
+        }
+      ]
+    },
+    "keywordsOperator": {
+      "patterns": [
+        {
+          "match": "\\b(music|effect|snapshot)\\b",
+          "name": "support.function.audiogamo"
+        }
+      ]
+    },
+    "brackets": {
+      "patterns": [
+        {
+          "match": "[\\{\\}\\[\\]\\(\\)]",
+          "name": "punctuation.section.audiogamo"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "match": "\"([^\"\\\\]|\\\\.)*\"",
+          "name": "string.quoted.double.audiogamo"
+        },
+        {
+          "match": "'([^'\\\\]|\\\\.)*'",
+          "name": "string.quoted.single.audiogamo"
+        }
+      ]
+    },
+    "booleans": {
+        "patterns": [
+            {
+            "match": "\\b(true|false)\\b",
+            "name": "constant.language.boolean.audiogamo"
+            }
+        ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "match": "\\b\\d+(\\.\\d+)?\\b",
+          "name": "constant.numeric.audiogamo"
+        }
+      ]
+    },
+    "identifiers": {
+      "patterns": [
+        {
+          "match": "\\b[A-Za-z_][A-Za-z0-9_]*\\b",
+          "name": "variable.other.audiogamo"
+        }
+      ]
+    },
+    "units": {
+      "patterns": [
+        {
+          "match": "(?<=\\d)\\s*(s|ms|%|px|vh|vw|em|rem)\\b",
+          "name": "constant.numeric.audiogamo"
+        }
+      ]
+    },
+    "comments": {
+      "patterns": [
+        {
+          "match": "//.*$",
+          "name": "comment.line.double-slash.audiogamo"
+        }
+      ]
+    }
+  }
+}

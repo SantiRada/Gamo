@@ -1,0 +1,44 @@
+{
+  "iconDefinitions": {
+    "gamo-icon": { "iconPath": "./icons/GAMO.svg" },
+    "lang-icon": { "iconPath": "./icons/LANG.svg" },
+    "dialog-icon": { "iconPath": "./icons/DIALOG.svg" },
+    "audio-icon": { "iconPath": "./icons/AUDIO.svg" },
+    "sound-icon": { "iconPath": "./icons/SOUND.svg" },
+    "art-icon": { "iconPath": "./icons/ART.svg" },
+    "ui-icon": { "iconPath": "./icons/UI.svg" },
+
+    "json": { "iconPath": "./icons/code/json.svg" },
+
+    "folder-icon": { "iconPath": "./icons/base/FOLDER_VOID.svg" },
+    "folder-open-icon": { "iconPath": "./icons/base/FOLDER_FILL.svg" },
+    "file": { "iconPath": "./icons/base/FILE.svg" },
+    "imgs": { "iconPath": "./icons/base/IMGS.svg" }
+  },
+  "file": "file",
+  "fileExtensions": {
+    "gamo": "gamo-icon",
+    "lang": "lang-icon",
+    "dialog": "dialog-icon",
+    "audio": "audio-icon",
+    "sound": "sound-icon",
+    "art": "art-icon",
+    "ui": "ui-icon",
+
+    "json": "json",
+
+    "png": "imgs",
+    "jpg": "imgs",
+    "jpeg": "imgs",
+    "gif": "imgs",
+    "bmp": "imgs",
+    "webp": "imgs",
+    "svg": "imgs"
+  },
+  "fileNames": {},
+  "folderNames": {},
+  "folder": "folder-icon",
+  "folderExpanded": "folder-open-icon",
+  "light": {},
+  "highContrast": {}
+}

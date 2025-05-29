@@ -1,0 +1,93 @@
+{
+  "scopeName": "source.uigamo",
+  "patterns": [
+    { "include": "#keywordsControl" },
+    { "include": "#keywordsOperator" },
+    { "include": "#separator" },
+    { "include": "#brackets" },
+    { "include": "#strings" },
+    { "include": "#numbers" },
+    { "include": "#booleans" },
+    { "include": "#identifiers" },
+    { "include": "#units" },
+    { "include": "#comments" }
+  ],
+  "repository": {
+    "keywordsControl": {
+      "patterns": [
+        {
+          "match": "\\b(interface|Interface|HUD|Menu|Load|Loading)\\b",
+          "name": "keyword.control.uigamo"
+        }
+      ]
+    },
+    "keywordsOperator": {
+      "patterns": [
+        {
+          "match": "\\b()\\b",
+          "name": "support.function.uigamo"
+        }
+      ]
+    },
+    "brackets": {
+      "patterns": [
+        {
+          "match": "[\\{\\}\\[\\]\\(\\)]",
+          "name": "punctuation.section.uigamo"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "match": "\"([^\"\\\\]|\\\\.)*\"",
+          "name": "string.quoted.double.uigamo"
+        },
+        {
+          "match": "'([^'\\\\]|\\\\.)*'",
+          "name": "string.quoted.single.uigamo"
+        }
+      ]
+    },
+    "booleans": {
+        "patterns": [
+            {
+            "match": "\\b(true|false)\\b",
+            "name": "constant.language.boolean.uigamo"
+            }
+        ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "match": "\\b\\d+(\\.\\d+)?\\b",
+          "name": "constant.numeric.uigamo"
+        }
+      ]
+    },
+    "identifiers": {
+      "patterns": [
+        {
+          "match": "\\b[A-Za-z_][A-Za-z0-9_]*\\b",
+          "name": "variable.other.uigamo"
+        }
+      ]
+    },
+    "units": {
+      "patterns": [
+        {
+          "match": "(?<=\\d)\\s*(s|ms|%|px|vh|vw|em|rem)\\b",
+          "name": "constant.numeric.uigamo"
+        }
+      ]
+    },
+    "comments": {
+      "patterns": [
+        {
+          "match": "//.*$",
+          "name": "comment.line.double-slash.uigamo"
+        }
+      ]
+    }
+  }
+}
