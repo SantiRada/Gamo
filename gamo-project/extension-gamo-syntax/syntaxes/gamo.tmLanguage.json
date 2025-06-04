@@ -1,0 +1,93 @@
+{
+  "scopeName": "source.gamo",
+  "patterns": [
+    { "include": "#keywordsControl" },
+    { "include": "#keywordsOperator" },
+    { "include": "#separator" },
+    { "include": "#brackets" },
+    { "include": "#strings" },
+    { "include": "#numbers" },
+    { "include": "#booleans" },
+    { "include": "#identifiers" },
+    { "include": "#units" },
+    { "include": "#comments" }
+  ],
+  "repository": {
+    "keywordsControl": {
+      "patterns": [
+        {
+          "match": "\\b(scene|import|export|default)\\b",
+          "name": "keyword.control.gamo"
+        }
+      ]
+    },
+    "keywordsOperator": {
+      "patterns": [
+        {
+          "match": "\\b(show)\\b",
+          "name": "support.function.gamo"
+        }
+      ]
+    },
+    "brackets": {
+      "patterns": [
+        {
+          "match": "[\\{\\}\\[\\]\\(\\)]",
+          "name": "punctuation.section.gamo"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "match": "\"([^\"\\\\]|\\\\.)*\"",
+          "name": "string.quoted.double.gamo"
+        },
+        {
+          "match": "'([^'\\\\]|\\\\.)*'",
+          "name": "string.quoted.single.gamo"
+        }
+      ]
+    },
+    "booleans": {
+        "patterns": [
+            {
+            "match": "\\b(true|false)\\b",
+            "name": "constant.language.boolean.gamo"
+            }
+        ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "match": "\\b\\d+(\\.\\d+)?\\b",
+          "name": "constant.numeric.gamo"
+        }
+      ]
+    },
+    "identifiers": {
+      "patterns": [
+        {
+          "match": "\\b[A-Za-z_][A-Za-z0-9_]*\\b",
+          "name": "variable.other.gamo"
+        }
+      ]
+    },
+    "units": {
+      "patterns": [
+        {
+          "match": "(?<=\\d)\\s*(s|ms|%|px|vh|vw|em|rem)\\b",
+          "name": "constant.numeric.gamo"
+        }
+      ]
+    },
+    "comments": {
+      "patterns": [
+        {
+          "match": "//.*$",
+          "name": "comment.line.double-slash.gamo"
+        }
+      ]
+    }
+  }
+}

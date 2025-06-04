@@ -1,0 +1,42 @@
+entity Player {
+    // Componentes automáticos basados en uso
+    atom physics: RigidBody2D { mass: 1.0 }
+    atom spatial: Transform2D
+    atom visual: Sprite("player_sprite")
+    
+    // Propiedades con valores por defecto
+    var moveSpeed: 5.0
+    var jumpForce: 12.0
+    
+    // Estados reactivos automáticos
+    state isGrounded: spatial.touching(Ground)
+    state facingRight: physics.velocity.x > 0
+    
+    // Comportamientos declarativos
+    behavior Movement {
+        // Input reactivo automático
+        on Input.horizontal => {
+            physics.velocity.x = input * moveSpeed
+        }
+        
+        on Input.jump when isGrounded => {
+            physics.velocity.y = jumpForce
+        }
+        
+        // Reacciones automáticas a cambios de estado
+        when facingRight.changes => {
+            visual.flipX = !facingRight
+        }
+    }
+    
+    // Animaciones contextuales automáticas
+    state animations {
+        idle: when physics.velocity.magnitude < 0.1
+        walking: when physics.velocity.x != 0 and isGrounded
+        jumping: when !isGrounded and physics.velocity.y > 0
+        falling: when !isGrounded and physics.velocity.y < 0
+    }
+}
+
+// Uso simple
+scene.spawn(Player, position: (100, 50))

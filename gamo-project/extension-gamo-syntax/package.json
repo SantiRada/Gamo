@@ -3,9 +3,13 @@
   "displayName": "Gamo Language Syntaxes",
   "description": "Syntax highlighting for all extensions in the Gamo language",
   "version": "0.0.1",
+  "main": "./extension.js",
+  "activationEvents": [ "onCommand:gamo.validateFile" ],
   "publisher": "Gamo Studios",
   "icon": "assets/icon.png",
-  "engines": { "vscode": "^1.60.0" },
+  "engines": {
+    "vscode": "^1.75.0"
+  },
   "scripts": {
     "compile": "npx vsce package",
     "dev": "code --install-extension gamo-0.0.1.vsix"
@@ -17,6 +21,12 @@
         "id": "gamo",
         "aliases": ["Gamo"],
         "extensions": [".gamo"],
+        "configuration": "./language-configuration.json"
+      },
+      {
+        "id": "gmi",
+        "aliases": ["GMI"],
+        "extensions": [".gmi"],
         "configuration": "./language-configuration.json"
       },
       {
@@ -61,6 +71,11 @@
         "language": "gamo",
         "scopeName": "source.gamo",
         "path": "./syntaxes/gamo.tmLanguage.json"
+      },
+      {
+        "language": "gmi",
+        "scopeName": "source.gmi",
+        "path": "./syntaxes/gmi.tmLanguage.json"
       },
       {
         "language": "dialoggamo",
@@ -137,6 +152,12 @@
         "id": "gamo-icons",
         "label": "Gamo Icons",
         "path": "./gamo-icon-theme.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "gamo.validateFile",
+        "title": "Validar archivos Gamo"
       }
     ]
   },

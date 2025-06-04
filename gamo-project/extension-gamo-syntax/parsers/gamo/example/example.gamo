@@ -1,0 +1,6 @@
+import hud from 'visual/hud.ui'
+import scene from './example.gamo';
+
+scene Menu () {
+  show(hud)
+}

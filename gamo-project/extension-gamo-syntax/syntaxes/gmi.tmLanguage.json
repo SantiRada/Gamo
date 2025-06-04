@@ -1,0 +1,47 @@
+{
+  "scopeName": "source.gmi",
+  "patterns": [
+    { "include": "#brackets" },
+    { "include": "#strings" },
+    { "include": "#identifiers" },
+    { "include": "#comments" }
+  ],
+  "repository": {
+    "brackets": {
+      "patterns": [
+        {
+          "match": "[\\{\\}\\[\\]\\(\\)]",
+          "name": "punctuation.section.gmi"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "match": "\"([^\"\\\\]|\\\\.)*\"",
+          "name": "string.quoted.double.gmi"
+        },
+        {
+          "match": "'([^'\\\\]|\\\\.)*'",
+          "name": "string.quoted.single.gmi"
+        }
+      ]
+    },
+    "identifiers": {
+      "patterns": [
+        {
+          "match": "\\b[A-Za-z_][A-Za-z0-9_]*\\b",
+          "name": "variable.other.gmi"
+        }
+      ]
+    },
+    "comments": {
+      "patterns": [
+        {
+          "match": "//.*$",
+          "name": "comment.line.double-slash.gmi"
+        }
+      ]
+    }
+  }
+}

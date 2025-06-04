@@ -1,34 +1,21 @@
-export function transformGamoAST(ast) {
+export function transformGamoAST(parsed) {
   const result = {
     imports: [],
-    functions: []
+    functions: [],
+    scenes: []
   };
 
-  for (const node of ast.body) {
-    if (node.type === 'ImportDeclaration') {
-      const alias = node.specifiers[0]?.local?.name;
-      const path = node.source.value;
-      result.imports.push({ alias, path });
-    }
+  // Copiar imports directamente
+  result.imports = parsed.imports;
 
-    if (node.type === 'FunctionDeclaration') {
-      const func = {
-        name: node.id.name,
-        body: []
-      };
+  // Copiar funciones si están presentes
+  if (parsed.functions) {
+    result.functions = parsed.functions;
+  }
 
-      for (const stmt of node.body.body) {
-        if (stmt.type === 'ExpressionStatement' && stmt.expression.type === 'CallExpression') {
-          func.body.push({
-            type: 'call',
-            name: stmt.expression.callee.name,
-            args: stmt.expression.arguments.map(arg => arg.name)
-          });
-        }
-      }
-
-      result.functions.push(func);
-    }
+  // Copiar escenas si están presentes
+  if (parsed.scenes) {
+    result.scenes = parsed.scenes;
   }
 
   return result;

@@ -1,0 +1,31 @@
+{
+  "product": {
+    "id": "com.GamoStudios.TestInGamo",
+    "name": "Nuevo Juego",
+    "version": "0.1.0",
+    "logo": "./assets/logo.png",
+    "splash": {
+      "image": ["./assets/splash.gif"],
+      "duration": [3, 1],
+      "background": ["./", "#000000"],
+      "format": "VERTICAL|HORIZONTAL|CENTER",
+      "visibility-gamo": "true|false",
+      "animation": ""
+    },
+    "test-scene": "./scenes/testing-game.scene"
+  },
+  "icon-package": {
+    "1024": "./",
+    "512": "./",
+    "256": "./",
+    "128": "./",
+    "48": "./",
+    "32": "./"
+  },
+  "assets": {
+    "preload": "lazy|initial|none|LOD",
+    "dir": ["./sound/forestal", "./sprites/character/"]
+  },
+  "dependencies": {},
+  "dev-dependencies": {}
+}

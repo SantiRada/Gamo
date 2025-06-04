@@ -1,0 +1,43 @@
+{
+  "Scene": {
+    "prefix": "scene",
+    "body": [
+      "scene ${1:Nombre} () {",
+      "  ${2:// código de la escena}",
+      "}"
+    ],
+    "description": "Declara una escena en Gamo"
+  },
+  "Import": {
+    "prefix": "import",
+    "body": [
+      "import ${1:alias} from '${2:ruta/archivo.ext}'"
+    ],
+    "description": "Importa un archivo o módulo"
+  },
+  "Show": {
+    "prefix": "show",
+    "body": [
+      "show(${1:elemento})"
+    ],
+    "description": "Muestra un elemento en pantalla"
+  },
+  "Function": {
+    "prefix": "fn",
+    "body": [
+      "function ${1:nombre} () {",
+      "  ${2:// cuerpo de la función}",
+      "}"
+    ],
+    "description": "Declara una función"
+  },
+  "If Statement": {
+    "prefix": "if",
+    "body": [
+      "if (${1:condición}) {",
+      "  ${2:// cuerpo}",
+      "}"
+    ],
+    "description": "Condición if"
+  }
+}
